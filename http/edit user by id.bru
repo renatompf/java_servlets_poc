@@ -1,0 +1,19 @@
+meta {
+  name: edit user by id
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:8080/users/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "John Doe",
+    "email": "john.d02@example.com",
+    "country": "USA"
+  }
+}
