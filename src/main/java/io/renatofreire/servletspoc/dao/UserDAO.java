@@ -1,8 +1,7 @@
 package io.renatofreire.servletspoc.dao;
 
-import io.renatofreire.servletspoc.controllers.UserServlet;
 import io.renatofreire.servletspoc.model.User;
-import io.renatofreire.servletspoc.utils.DatabaseConnection;
+import io.renatofreire.servletspoc.configuration.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class UserDAO {

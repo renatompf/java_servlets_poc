@@ -1,6 +1,6 @@
-package io.renatofreire.servletspoc.controllers.requestHandlers.user;
+package io.renatofreire.servletspoc.handlers.get;
 
-import io.renatofreire.servletspoc.controllers.requestHandlers.RequestHandler;
+import io.renatofreire.servletspoc.core.RequestHandler;
 import io.renatofreire.servletspoc.service.UserService;
 import io.renatofreire.servletspoc.utils.ResponseSenderUtils;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,20 +1,13 @@
-package io.renatofreire.servletspoc.controllers.requestHandlers.user;
+package io.renatofreire.servletspoc.handlers.delete;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.renatofreire.servletspoc.controllers.requestHandlers.RequestHandler;
-import io.renatofreire.servletspoc.dto.UserDtoIn;
-import io.renatofreire.servletspoc.model.User;
+import io.renatofreire.servletspoc.core.RequestHandler;
 import io.renatofreire.servletspoc.service.UserService;
 import io.renatofreire.servletspoc.utils.PathUtils;
 import io.renatofreire.servletspoc.utils.ResponseSenderUtils;
-import io.renatofreire.servletspoc.utils.ValidationUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.validation.Validator;
 
 import java.io.IOException;
-import java.util.Map;
-import java.util.Optional;
 
 
 public class DeleteUserHandler implements RequestHandler {

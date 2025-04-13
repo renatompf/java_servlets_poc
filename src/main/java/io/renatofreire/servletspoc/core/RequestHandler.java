@@ -1,4 +1,4 @@
-package io.renatofreire.servletspoc.controllers.requestHandlers;
+package io.renatofreire.servletspoc.core;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

@@ -1,4 +1,4 @@
-package io.renatofreire.servletspoc.controllers;
+package io.renatofreire.servletspoc.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServlet;

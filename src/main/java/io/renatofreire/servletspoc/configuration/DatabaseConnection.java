@@ -1,4 +1,4 @@
-package io.renatofreire.servletspoc.utils;
+package io.renatofreire.servletspoc.configuration;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
