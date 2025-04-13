@@ -59,8 +59,8 @@ docker-compose up
 #### Create User (POST `/users`)
 ```json
 {
-  "name": "John Doe",
-  "email": "john.doe@example.com",
+  "name": "Larry Page",
+  "email": "larry@gmail.com",
   "country": "USA"
 }
 ```
@@ -68,8 +68,8 @@ docker-compose up
 #### Update User (PUT `/users/{id}`)
 ```json
 {
-  "name": "John Doe",
-  "email": "john.doe@example.com",
+  "name": "Larry Page",
+  "email": "larry.page@gmail.com",
   "country": "USA"
 }
 ```
