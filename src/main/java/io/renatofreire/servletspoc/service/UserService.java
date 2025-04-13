@@ -6,10 +6,12 @@ import jakarta.persistence.EntityExistsException;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 public class UserService {
 
     private final UserDAO userDAO;
+    private final Logger logger = Logger.getLogger(UserService.class.getName());
 
     public UserService(UserDAO userDAO) {
         this.userDAO = userDAO;
@@ -24,6 +26,11 @@ public class UserService {
     }
 
     public void createUser(User user) {
+
+        if(userDAO.selectUserByEmail(user.getEmail()) != null) {
+            throw new EntityExistsException("User with this email already exists");
+        }
+
         userDAO.insertUser(user);
     }
 
