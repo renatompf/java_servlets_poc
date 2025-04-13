@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: userdb
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    volumes:
+      - ./migrations/:/docker-entrypoint-initdb.d/
+    ports:
+      - "5432:5432"
+
+  webapp:
+    build: .
+    container_name: tomcat_container
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/userdb
+      DB_USER: postgres
+      DB_PASSWORD: secret
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logging.properties:/usr/local/tomcat/conf/logging.properties
